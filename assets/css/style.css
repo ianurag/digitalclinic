@@ -1,0 +1,60 @@
+/*
+
+* Override Pages default styles or create your own styles here
+
+
+.
+*/
+
+
+.search-doctor{margin-top: 25px; margin-bottom: 30px;}
+
+.doctor-search-info .title{
+	font-family: 'Montserrat';
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #47b5ab;
+}
+
+.doctor-search-info .title-consultancy{
+	    font-family: 'Montserrat';
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #CACACA;
+}
+
+
+.table-doc-clinic tbody tr td {
+    background: #fff;
+    border-bottom: 1px solid rgba(213, 218, 219, 0.7);
+    border-top: 0px;
+    padding: 20px;
+    font-size: 13.5px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border: none;
+}
+
+
+.table-small tbody tr td{
+	padding: 5px;
+	border: none;
+}
+
+.table-small tbody tr td:first-child{font-weight: bold;}
+
+.book-now-btn{width: 100%;
+display: block;}
+.book-now-btn .btn{width:100%;    width: 100%;
+    text-align: center !important;}
+
+
+    .online-status{position: relative;
+    top: -25px;
+    right: -14px;
+font-size: 16px !important;
+}
+
+    .online{color: #6EE089 !important;}
