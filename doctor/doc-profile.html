@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta charset="utf-8" />
+        <title>DigitalClinic - Doctor's Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="apple-touch-icon" href="pages/ico/60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN Vendor CSS-->
+        <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="assets/plugins/jquery-datatable/media/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen" />
+        <link media="screen" type="text/css" rel="stylesheet" href="assets/plugins/switchery/css/switchery.min.css">
+        <!-- BEGIN Pages CSS-->
+        <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+        <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
+        <link class="main-stylesheet" href="pages/css/themes/simple.css" rel="stylesheet" type="text/css" />
+        <link media="screen" type="text/css" rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+        <link media="screen" type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+        <!--[if lte IE 9]>
+                                                                                                                                        <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <script type="text/javascript">
+                                                                                            window.onload = function()
+                                                                                            {
+                                                                                            // fix for windows 8
+                                                                                            if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
+                                                                                                document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="pages/css/windows.chrome.fix.css" />'
+                                                                                            }
+        </script>
+    </head>
+    <body class="fixed-header">
+        <!-- BEGIN SIDEBAR -->
+        <div class="page-sidebar" data-pages="sidebar">
+            <div id="appMenu" class="sidebar-overlay-slide from-top">
+            </div>
+            <!-- BEGIN SIDEBAR HEADER -->
+            <div class="sidebar-header">
+                <img src="assets/img/logo_clinic.png" alt="logo" class="brand" data-src="assets/img/logo_clinic.png" data-src-retina="assets/img/logo_clinic.png" width="78" height="22">
+                <div class="sidebar-header-controls">
+                    <button data-pages-toggle="#appMenu" class="btn btn-xs sidebar-slide-toggle btn-link m-l-20" type="button"><i class="fa fa-angle-down fs-16"></i>
+                    </button>
+                    <button data-toggle-pin="sidebar" class="btn btn-link visible-lg-inline" type="button"><i class="fa fs-12"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- END SIDEBAR HEADER -->
+            <!-- BEGIN SIDEBAR MENU -->
+            <div class="sidebar-menu">
+                <ul class="menu-items">
+                    <li class="m-t-30">
+                        <a href="#" class="detailed">
+                        <span class="title">Dashboard</span>
+                        <!-- <span class="details">234 notifications</span> -->
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-tachometer"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                        <span class="title">My Profile</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-user-md"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                        <span class="title">My Appointments</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-calendar-check-o"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                        <span class="title">My Calender</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-calendar"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#">
+                        <span class="title">Appointment History</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-history"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#" data-toggle="quickview" data-toggle-element="#quickview">
+                        <span class="title">Messages</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-envelope-o"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#" data-toggle="modal" data-target="#chatSettingModal">
+                        <span class="title">Chat Settings</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-comment"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#"  data-toggle="modal" data-target="#bankAccountModal">
+                        <span class="title">Bank Account Details</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-credit-card"></i></span>
+                    </li>
+                    <li class="">
+                        <a href="#" data-toggle="modal" data-target="#changePwdModal">
+                        <span class="title">Change Password</span>
+                        </a>
+                        <span class="icon-thumbnail "><i class="fa fa-unlock-alt"></i></span>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <!-- END SIDEBAR MENU -->
+        </div>
+        <!-- END SIDEBAR -->
+        <!-- START PAGE-CONTAINER -->
+        <div class="page-container">
+            <!-- START PAGE HEADER WRAPPER -->
+            <!-- START HEADER -->
+            <div class="header ">
+                <!-- START MOBILE CONTROLS -->
+                <!-- LEFT SIDE -->
+                <div class="pull-left full-height visible-sm visible-xs">
+                    <!-- START ACTION BAR -->
+                    <div class="sm-action-bar">
+                        <a href="#" class="btn-link toggle-sidebar" data-toggle="sidebar">
+                        <span class="icon-set menu-hambuger"></span>
+                        </a>
+                    </div>
+                    <!-- END ACTION BAR -->
+                </div>
+                <!-- RIGHT SIDE -->
+                <div class="pull-right full-height visible-sm visible-xs">
+                    <!-- START ACTION BAR -->
+                    <div class="sm-action-bar">
+                        <a href="#" class="btn-link" data-toggle="quickview" data-toggle-element="#quickview">
+                        <span class="icon-set menu-hambuger-plus"></span>
+                        </a>
+                    </div>
+                    <!-- END ACTION BAR -->
+                </div>
+                <!-- END MOBILE CONTROLS -->
+                <div class=" pull-left sm-table">
+                    <div class="header-inner">
+                        <div class="brand inline">
+                            <img src="assets/img/logo_clinic_black.png" alt="logo" data-src="assets/img/logo_clinic_black.png" data-src-retina="assets/img/logo_clinic_black.png" width="78" height="22">
+                        </div>
+                        <a href="#" class="search-link" data-toggle="search"><i class="pg-search"></i>Type anywhere to <span class="bold">search</span></a>
+                    </div>
+                </div>
+                <div class=" pull-right">
+                    <div class="header-inner">
+                        <a href="#" class="btn-link icon-set menu-hambuger-plus m-l-20 sm-no-margin hidden-sm hidden-xs" data-toggle="quickview" data-toggle-element="#quickview"></a>
+                    </div>
+                </div>
+                <div class=" pull-right">
+                    <!-- START User Info-->
+                    <div class="visible-lg visible-md m-t-10">
+                        <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
+                            <span class="semi-bold">John</span> <span class="text-master">Doe</span>
+                        </div>
+                        <div class="dropdown pull-right">
+                            <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="thumbnail-wrapper d32 circular inline m-t-5">
+                            <img src="assets/img/profiles/avatar.jpg" alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+                            </span>
+                            </button>
+                            <ul class="dropdown-menu profile-dropdown" role="menu">
+                                <li><a href="#"><i class="pg-settings_small"></i> Settings</a>
+                                </li>
+                                
+                                <li class="bg-master-lighter">
+                                    <a href="login.html" class="clearfix">
+                                    <span class="pull-left">Logout</span>
+                                    <span class="pull-right"><i class="pg-power"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END User Info-->
+                </div>
+            </div>
+            <!-- END HEADER -->
+            <!-- END PAGE HEADER WRAPPER -->
+            <!-- START PAGE CONTENT WRAPPER -->
+            <div class="page-content-wrapper">
+                <!-- START PAGE CONTENT -->
+                <div class="content full-height ">
+                    <!-- START JUMBOTRON -->
+                    <div class="jumbotron no-margin" data-pages="parallax">
+                        <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+                            <div class="inner" style="transform: translateY(0px); opacity: 1;">
+                                <h3 class=""><i class="fa fa-user-md"></i> My Profile</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END JUMBOTRON -->
+                    <div class="container-fluid container-fixed-lg bg-white">
+                        <div class="row">
+                            <div class="col-sm-6 ">
+                                <div class="panel panel-transparent">
+                                    <div class="panel-heading m-t-10">
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="container-xs-height">
+                                                    <div class="row-xs-height">
+                                                        <div class="profile-user-profile col-xs-height text-center col-top">
+                                                            <div class="thumbnail-wrapper d-full circular bordered b-white">
+                                                                <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
+                                                            </div>
+                                                            <span class="text-warning fs-10 online-status online"><i class="fa fa-circle"></i></span>
+                                                        </div>
+                                                        <div class="col-xs-height p-l-20">
+                                                            <h3 class="font-montserrat text-uppercase">Dr. Valorie Aller</h3>
+                                                            <p class="no-margin fs-16">(cardiologist)</p>
+                                                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-certificate"></i> MBBS, FRCS, University of Sydney</p>
+                                                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-thumbs-o-up"></i> (344 Reviews)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h5 class="font-montserrat text-uppercase m-t-40">Basic Details</h5>
+                                                <hr>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        DOB
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        22-Aug-1977
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        E-mail
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        ravi.kumar@gmail.com
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        Address
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        5, S.N.Banerjee Road.
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        State
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        West Bengal
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        Pin
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        700035
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        Phone
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        +91 8981675554
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        City
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        kolkata
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-4 bold">
+                                                        About
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p>Dr. Mahasweta Deb Ray is an Orthodontist in Salt Lake, Kolkata and has an experience of 8 years in this field. Dr. Mahasweta Deb Ray practices at Prima ...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel panel-transparent">
+                                    <div class="panel-heading m-t-10">
+                                        <div class="panel-title"><i class="fa fa-clock-o"></i> Timing
+                                            <a data-toggle="modal" data-target="#new-doc-modal" class="btn btn-transparent pull-right" href="#"><i class="fa fa-pencil"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="doctor-search-info">
+                                            <div class="col-xs-8 no-padding">
+                                                <h5 class="title">Virtual Clinic</h5>
+                                                <table class="table table-doc-clinic" cellspacing="0" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong>7PM - 8PM</strong></td>
+                                                            <td><small>Mon, Tue, Wed</small></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-xs-4 no-padding">
+                                                <h5 class="title-consultancy text-right">Consultancy</h5>
+                                                <span class="label label-success pull-right "><i class="fa fa-inr"></i> 500</span>
+                                            </div>
+                                        </div>
+                                        <div class="doctor-search-info">
+                                            <div class="col-xs-8 no-padding">
+                                                <h5 class="title">Sharma Clinic</h5>
+                                                <table class="table table-doc-clinic" cellspacing="0" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong>7PM - 8PM</strong></td>
+                                                            <td><small>Mon, Tue, Wed</small></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong>7PM - 8PM</strong></td>
+                                                            <td><small>Mon, Tue, Wed</small></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-xs-4 no-padding">
+                                                <h5 class="title-consultancy text-right">Consultancy</h5>
+                                                <span class="label label-success pull-right "><i class="fa fa-inr"></i> 200</span>
+                                            </div>
+                                        </div>
+                                        <div class="doctor-search-info">
+                                            <div class="col-xs-8 no-padding">
+                                                <h5 class="title">Medicave Clinic</h5>
+                                                <table class="table table-doc-clinic" cellspacing="0" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong>7PM - 8PM</strong></td>
+                                                            <td><small>Mon, Tue, Wed</small></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong>7PM - 8PM</strong></td>
+                                                            <td><small>Mon, Tue, Wed</small></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-xs-4 no-padding">
+                                                <h5 class="title-consultancy text-right">Consultancy</h5>
+                                                <span class="label label-success pull-right "><i class="fa fa-inr"></i> 200</span>
+                                            </div>
+                                        </div>
+                                        <div class="doctor-search-info">
+                                            <div class="col-xs-8 no-padding">
+                                                <h5 class="title">Apollo Clinic</h5>
+                                                <table class="table table-doc-clinic" cellspacing="0" width="100%">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><strong>7PM - 8PM</strong></td>
+                                                            <td><small>Mon, Tue, Wed</small></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong>7PM - 8PM</strong></td>
+                                                            <td><small>Mon, Tue, Wed</small></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-xs-4 no-padding">
+                                                <h5 class="title-consultancy text-right">Consultancy</h5>
+                                                <span class="label label-success pull-right "><i class="fa fa-inr"></i> 200</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="col-md-12">
+                                    <hr>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-2 bold">
+                                            Specializations
+                                        </div>
+                                        <div class="col-md-10">
+                                            <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                <option value="Male">MBBS</option>
+                                            </select>
+                                            <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                <option value="Male">North Bengal Medical Collage</option>
+                                            </select>
+                                            <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                <option value="Male">1995</option>
+                                            </select>
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-2 bold">
+                                            Experience
+                                        </div>
+                                        <div class="col-md-10">
+                                            <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                <option value="Male">3/10/1997</option>
+                                            </select>
+                                            <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                <option value="Male">12/3/2005</option>
+                                            </select>
+                                            <input class="custom-input" type="text" value="Apollo Hospital">
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-2 bold">
+                                            Membership
+                                        </div>
+                                        <div class="col-md-10">
+                                            <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                <option value="Male">2002</option>
+                                            </select>
+                                            <input class="custom-input" type="text" value="Awarded Distinction In Pathology">
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-2 bold">
+                                            Memberships
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input class="custom-input" type="text" value="American Society Of Clinical Oncology">
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-2 bold">
+                                            Reg. No.
+                                        </div>
+                                        <div class="col-md-10">
+                                            <input class="custom-input" type="text" value="325235235252">
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                            <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT -->
+                <!-- START FOOTER -->
+                <div class="container-fluid container-fixed-lg footer">
+                    <div class="copyright sm-text-center">
+                        <p class="small no-margin pull-left sm-pull-reset">
+                        <span class="hint-text">Copyright © 2015</span>
+                        <span class="font-montserrat">Digital Clinic</span>.
+                        <span class="hint-text">All rights reserved.</span>
+                        <span class="sm-block">
+                        <a href="#" >About Us</a> |
+                        <a href="#" >Take A Tour</a> |
+                        <a href="#" >Terms & Condition</a> |
+                        <a href="#" >Contact Us</a> |
+                        <a href="#" >Careers</a>
+                        </span>
+                        </p>
+                        <p class="small no-margin pull-right sm-pull-reset">
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- END FOOTER -->
+            </div>
+            <!-- END PAGE CONTENT WRAPPER -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+        <!--START QUICKVIEW -->
+        <div id="quickview" class="quickview-wrapper" data-pages="quickview">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="">
+                    <a href="#quickview-notes" data-toggle="tab">Notes</a>
+                </li>
+                <li>
+                    <a href="#quickview-alerts" data-toggle="tab">Alerts</a>
+                </li>
+                <li class="active">
+                    <a href="#quickview-chat" data-toggle="tab">Chat</a>
+                </li>
+            </ul>
+            <a class="btn-link quickview-toggle" data-toggle-element="#quickview" data-toggle="quickview"><i class="pg-close"></i></a>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- BEGIN Notes !-->
+                <div class="tab-pane fade  in no-padding" id="quickview-notes">
+                    <div class="view-port clearfix quickview-notes" id="note-views">
+                        <!-- BEGIN Note List !-->
+                        <div class="view list" id="quick-note-list">
+                            <div class="toolbar clearfix">
+                                <ul class="pull-right ">
+                                    <li>
+                                        <a href="#" class="delete-note-link"><i class="fa fa-trash-o"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="new-note-link" data-navigate="view" data-view-port="#note-views" data-view-animation="push"><i class="fa fa-plus"></i></a>
+                                    </li>
+                                </ul>
+                                <button class="btn-remove-notes btn btn-xs btn-block" style="display:none"><i class="fa fa-times"></i> Delete</button>
+                            </div>
+                            <ul>
+                                <!-- BEGIN Note Item !-->
+                                <li data-noteid="1" data-navigate="view" data-view-port="#note-views" data-view-animation="push">
+                                    <div class="left">
+                                        <!-- BEGIN Note Action !-->
+                                        <div class="checkbox check-warning no-margin">
+                                            <input id="qncheckbox1" type="checkbox" value="1">
+                                            <label for="qncheckbox1"></label>
+                                        </div>
+                                        <!-- END Note Action !-->
+                                        <!-- BEGIN Note Preview Text !-->
+                                        <p class="note-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                                        <!-- BEGIN Note Preview Text !-->
+                                    </div>
+                                    <!-- BEGIN Note Details !-->
+                                    <div class="right pull-right">
+                                        <!-- BEGIN Note Date !-->
+                                        <span class="date">12/12/14</span>
+                                        <a href="#"><i class="fa fa-chevron-right"></i></a>
+                                        <!-- END Note Date !-->
+                                    </div>
+                                    <!-- END Note Details !-->
+                                </li>
+                                <!-- END Note List !-->
+                            </ul>
+                        </div>
+                        <!-- END Note List !-->
+                        <div class="view note" id="quick-note">
+                            <div>
+                                <ul class="toolbar">
+                                    <li><a href="#" class="close-note-link" data-navigate="view" data-view-port="#note-views" data-view-animation="push"><i class="pg-arrow_left"></i></a>
+                                    </li>
+                                    <li><a href="#" class="Bold"><i class="fa fa-bold"></i></a>
+                                    </li>
+                                    <li><a href="#" class="Italic"><i class="fa fa-italic"></i></a>
+                                    </li>
+                                    <li><a href="#" class=""><i class="fa fa-link"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="body">
+                                    <div>
+                                        <div class="top">
+                                            <span>21st april 2014 2:13am</span>
+                                        </div>
+                                        <div class="content">
+                                            <div class="quick-note-editor full-width full-height js-input" contenteditable="true"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Notes !-->
+                <!-- BEGIN Alerts !-->
+                <div class="tab-pane fade no-padding" id="quickview-alerts">
+                    <div class="view-port clearfix" id="alerts">
+                        <!-- BEGIN Alerts View !-->
+                        <div class="view bg-white">
+                            <!-- BEGIN View Header !-->
+                            <div class="navbar navbar-default navbar-sm">
+                                <div class="navbar-inner">
+                                    <!-- BEGIN Header Controler !-->
+                                    <a href="javascript:;" class="inline action p-l-10 link text-master" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                                    <i class="pg-more"></i>
+                                    </a>
+                                    <!-- END Header Controler !-->
+                                    <div class="view-heading">
+                                        Notications
+                                    </div>
+                                    <!-- BEGIN Header Controler !-->
+                                    <a href="#" class="inline action p-r-10 pull-right link text-master">
+                                    <i class="pg-search"></i>
+                                    </a>
+                                    <!-- END Header Controler !-->
+                                </div>
+                            </div>
+                            <!-- END View Header !-->
+                            <!-- BEGIN Alert List !-->
+                            <div data-init-list-view="ioslist" class="list-view boreded no-top-border">
+                                <!-- BEGIN List Group !-->
+                                <div class="list-view-group-container">
+                                    <!-- BEGIN List Group Header!-->
+                                    <div class="list-view-group-header text-uppercase">
+                                        Calendar
+                                    </div>
+                                    <!-- END List Group Header!-->
+                                    <ul>
+                                        <!-- BEGIN List Group Item!-->
+                                        <li class="alert-list">
+                                            <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                                            <a href="javascript:;" class="" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                                            <p class="col-xs-height col-middle">
+                                            <span class="text-warning fs-10"><i class="fa fa-circle"></i></span>
+                                            </p>
+                                            <p class="p-l-10 col-xs-height col-middle col-xs-9 overflow-ellipsis fs-12">
+                                            <span class="text-master">David Nester Birthday</span>
+                                            </p>
+                                            <p class="p-r-10 col-xs-height col-middle fs-12 text-right">
+                                            <span class="text-warning">Today <br></span>
+                                            <span class="text-master">All Day</span>
+                                            </p>
+                                            </a>
+                                            <!-- END Alert Item!-->
+                                            <!-- BEGIN List Group Item!-->
+                                        </li>
+                                        <!-- END List Group Item!-->
+                                    </ul>
+                                </div>
+                                <!-- END List Group !-->
+                            </div>
+                            <!-- END Alert List !-->
+                        </div>
+                        <!-- EEND Alerts View !-->
+                    </div>
+                </div>
+                <!-- END Alerts !-->
+                <div class="tab-pane fade in active no-padding" id="quickview-chat">
+                    <div class="view-port clearfix" id="chat">
+                        <div class="view bg-white">
+                            <!-- BEGIN View Header !-->
+                            <div class="navbar navbar-default">
+                                <div class="navbar-inner">
+                                    <!-- BEGIN Header Controler !-->
+                                    <a href="javascript:;" class="inline action p-l-10 link text-master" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                                    <i class="pg-plus"></i>
+                                    </a>
+                                    <!-- END Header Controler !-->
+                                    <div class="view-heading">
+                                        Chat List
+                                        <div class="fs-11">Show All</div>
+                                    </div>
+                                    <!-- BEGIN Header Controler !-->
+                                    <a href="#" class="inline action p-r-10 pull-right link text-master">
+                                    <i class="pg-more"></i>
+                                    </a>
+                                    <!-- END Header Controler !-->
+                                </div>
+                            </div>
+                            <!-- END View Header !-->
+                            <div data-init-list-view="ioslist" class="list-view boreded no-top-border">
+                                <div class="list-view-group-container">
+                                    <div class="list-view-group-header text-uppercase">
+                                    a</div>
+                                    <ul>
+                                        <!-- BEGIN Chat User List Item  !-->
+                                        <li class="chat-user-list clearfix">
+                                            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
+                                            <span class="col-xs-height col-middle">
+                                            <span class="thumbnail-wrapper d32 circular bg-success">
+                                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/1x.jpg" data-src="assets/img/profiles/1.jpg" src="assets/img/profiles/1x.jpg" class="col-top">
+                                            </span>
+                                            </span>
+                                            <p class="p-l-10 col-xs-height col-middle col-xs-12">
+                                            <span class="text-master">ava flores</span>
+                                            <span class="block text-master hint-text fs-12">Hello there</span>
+                                            </p>
+                                            </a>
+                                        </li>
+                                        <!-- END Chat User List Item  !-->
+                                    </ul>
+                                </div>
+                                <div class="list-view-group-container">
+                                    <div class="list-view-group-header text-uppercase">b</div>
+                                    <ul>
+                                        <!-- BEGIN Chat User List Item  !-->
+                                        <li class="chat-user-list clearfix">
+                                            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
+                                            <span class="col-xs-height col-middle">
+                                            <span class="thumbnail-wrapper d32 circular bg-success">
+                                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/2x.jpg" data-src="assets/img/profiles/2.jpg" src="assets/img/profiles/2x.jpg" class="col-top">
+                                            </span>
+                                            </span>
+                                            <p class="p-l-10 col-xs-height col-middle col-xs-12">
+                                            <span class="text-master">bella mccoy</span>
+                                            <span class="block text-master hint-text fs-12">Hello there</span>
+                                            </p>
+                                            </a>
+                                        </li>
+                                        <!-- END Chat User List Item  !-->
+                                        <!-- BEGIN Chat User List Item  !-->
+                                        <li class="chat-user-list clearfix">
+                                            <a data-view-animation="push-parrallax" data-view-port="#chat" data-navigate="view" class="" href="#">
+                                            <span class="col-xs-height col-middle">
+                                            <span class="thumbnail-wrapper d32 circular bg-success">
+                                            <img width="34" height="34" alt="" data-src-retina="assets/img/profiles/3x.jpg" data-src="assets/img/profiles/3.jpg" src="assets/img/profiles/3x.jpg" class="col-top">
+                                            </span>
+                                            </span>
+                                            <p class="p-l-10 col-xs-height col-middle col-xs-12">
+                                            <span class="text-master">bob stephens</span>
+                                            <span class="block text-master hint-text fs-12">Hello there</span>
+                                            </p>
+                                            </a>
+                                        </li>
+                                        <!-- END Chat User List Item  !-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- BEGIN Conversation View  !-->
+                        <div class="view chat-view bg-white clearfix">
+                            <!-- BEGIN Header  !-->
+                            <div class="navbar navbar-default">
+                                <div class="navbar-inner">
+                                    <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                                    <i class="pg-arrow_left"></i>
+                                    </a>
+                                    <div class="view-heading">
+                                        John Smith
+                                        <div class="fs-11 hint-text">Online</div>
+                                    </div>
+                                    <a href="#" class="link text-master inline action p-r-10 pull-right ">
+                                    <i class="pg-more"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- END Header  !-->
+                            <!-- BEGIN Conversation  !-->
+                            <div class="chat-inner" id="my-conversation">
+                                <!-- BEGIN From Me Message  !-->
+
+ <div class="message clearfix">
+                                    <div class="profile-img-wrapper m-t-5 inline">
+                                        <img class="col-top" width="30" height="30" src="assets/img/profiles/avatar_small.jpg" alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg">
+                                    </div>
+                                    <div class="chat-bubble from-them">
+                                        Hello Doctor
+                                    </div>
+                                </div>
+                                <!-- END From Them Message  !-->
+
+
+
+
+
+
+                                <div class="message clearfix">
+                                    <div class="chat-bubble from-me">
+                                        Hey
+                                    </div>
+                                </div>
+                                <!-- END From Me Message  !-->
+                                <!-- BEGIN From Them Message  !-->
+                                <div class="message clearfix">
+                                    <div class="profile-img-wrapper m-t-5 inline">
+                                        <img class="col-top" width="30" height="30" src="assets/img/profiles/avatar_small.jpg" alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg">
+                                    </div>
+                                    <div class="chat-bubble from-them">
+                                        I am feeling seviour headech since last Monday
+                                    </div>
+                                </div>
+                                <!-- END From Them Message  !-->
+                               
+                                <!-- BEGIN From Me Message  !-->
+                                <div class="message clearfix">
+                                    <div class="chat-bubble from-me">
+                                        Okay, can you please schedule a appointment at your earliest.
+                                    </div>
+                                </div>
+                                <!-- END From Me Message  !-->
+                                <!-- BEGIN From Them Message  !-->
+                                <div class="message clearfix">
+                                    <div class="profile-img-wrapper m-t-5 inline">
+                                        <img class="col-top" width="30" height="30" src="assets/img/profiles/avatar_small.jpg" alt="" data-src="assets/img/profiles/avatar_small.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg">
+                                    </div>
+                                    <div class="chat-bubble from-them">
+                                        Sure, Thanks Doctor
+                                    </div>
+                                </div>
+                                <!-- END From Them Message  !-->
+                            </div>
+                            <!-- BEGIN Conversation  !-->
+                            <!-- BEGIN Chat Input  !-->
+                            <div class="b-t b-grey bg-white clearfix p-l-10 p-r-10">
+                                <div class="row">
+                                    <div class="col-xs-1 p-t-15">
+                                        <a href="#" class="link text-master"><i class="fa fa-plus-circle"></i></a>
+                                    </div>
+                                    <div class="col-xs-8 no-padding">
+                                        <input type="text" class="form-control chat-input" data-chat-input="" data-chat-conversation="#my-conversation" placeholder="Say something">
+                                    </div>
+                                    <div class="col-xs-2 link text-master m-l-10 m-t-15 p-l-10 b-l b-grey col-top">
+                                        <a href="#" class="link text-master"><i class="pg-camera"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Chat Input  !-->
+                        </div>
+                        <!-- END Conversation View  !-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END QUICKVIEW-->
+        <!-- MODAL STICK UP  -->
+        <div class="modal fade fill-in" id="new-add-clinic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog " style="width:80%">
+                <div class="modal-content">
+                    <div class="panel-heading modal-title ">
+                        <div class="panel-title">
+                            <div class="col-sm-9">
+                                <h5 class="panel-title font-montserrat text-uppercase">My Clinic Schedule
+                                </h5>
+                            </div>
+                            <div class="col-sm-3"><label>Slot Size</label>
+                            <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                <option value="Male">15 min</option>
+                                <option value="Male">30 min</option>
+                                <option value="Male">45 min</option>
+                                <option value="Male">60 min</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12 m-t-20 col-sm-12 m-b-20">
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="panel panel-group panel-transparent" data-toggle="collapse" id=
+                                        "accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                <a data-parent="#accordion" data-toggle=
+                                                "collapse" href="#collapseOne">Clinic 1 <small>(Virtual)</small></a>
+                                                <a class="pull-right m-r-30" href="#"><i class="fa fa-trash-o"></i></a>
+                                                </h4>
+                                            </div>
+                                            <div class="panel-collapse collapse in" id="collapseOne">
+                                                <div class="panel-body">
+                                                    <table class="table table-hover table-schedule">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Start Date</th>
+                                                                <th>End Date</th>
+                                                                <th>Timings</th>
+                                                                <th>Sun</th>
+                                                                <th>Mon</th>
+                                                                <th>Tue</th>
+                                                                <th>Wed</th>
+                                                                <th>Thur</th>
+                                                                <th>Fri</th>
+                                                                <th>Sat</th>
+                                                                <th></th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr><td>12th March'15</td><td>12th june'15</td>
+                                                            <td>10AM - 12AM</td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" checked="checked" value="1" id="mon1">
+                                                                    <label for="mon1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" checked="checked" value="1" id="tue1">
+                                                                    <label for="tue1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox"  value="1" id="wed1">
+                                                                    <label for="wed1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" checked="checked" value="1" id="thur1">
+                                                                    <label for="thur1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" checked="checked" value="1" id="fri1">
+                                                                    <label for="fri1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox"  value="1" id="sat1">
+                                                                    <label for="sat1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" value="1" id="sun1">
+                                                                    <label for="sun1"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td> <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                                            <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a></td>
+                                                            <td>
+                                                                <div class="form-group m-b-10">
+                                                                    <input type="text" placeholder=".input-sm" class="form-control input-sm">
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <tr><td>12th March'15</td><td>12th june'15</td>
+                                                            <td>10AM - 12AM</td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" checked="checked" value="1" id="mon2">
+                                                                    <label for="mon2"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" value="1" id="tue2">
+                                                                    <label for="tue2"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" checked="checked" value="1" id="wed2">
+                                                                    <label for="wed2"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" value="1" id="thur2">
+                                                                    <label for="thur2"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox"  value="1" id="fri2">
+                                                                    <label for="fri2"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox" checked="checked" value="1" id="sat2">
+                                                                    <label for="sat2"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="no-padding">
+                                                                <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                    <input type="checkbox"  value="1" id="sun2">
+                                                                    <label for="sun2"></label>
+                                                                </div>
+                                                            </td>
+                                                            <td> <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                                            <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h4 class="panel-title">
+                                            <a class="" data-parent="#accordion" data-toggle="collapse" href=
+                                            "#collapseTwo">Clinic 2 <small>(Virtual/In-Person)</small></a>
+                                            <a class="pull-right m-r-30" href="#"><i class="fa fa-trash-o"></i></a>
+                                            </h4>
+                                        </div>
+                                        <div class="panel-collapse collapse" id="collapseTwo">
+                                            <div class="panel-body">
+                                                <table class="table table-hover table-schedule">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Start Date</th>
+                                                            <th>End Date</th>
+                                                            <th>Timings</th>
+                                                            <th>Sun</th>
+                                                            <th>Mon</th>
+                                                            <th>Tue</th>
+                                                            <th>Wed</th>
+                                                            <th>Thur</th>
+                                                            <th>Fri</th>
+                                                            <th>Sat</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td>12th March'15</td><td>12th june'15</td>
+                                                        <td>10AM - 12AM</td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" checked="checked" value="1" id="mon1">
+                                                                <label for="mon1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" checked="checked" value="1" id="tue1">
+                                                                <label for="tue1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox"  value="1" id="wed1">
+                                                                <label for="wed1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" checked="checked" value="1" id="thur1">
+                                                                <label for="thur1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" checked="checked" value="1" id="fri1">
+                                                                <label for="fri1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox"  value="1" id="sat1">
+                                                                <label for="sat1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" value="1" id="sun1">
+                                                                <label for="sun1"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td> <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                                        <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <tr><td>12th March'15</td><td>12th june'15</td>
+                                                        <td>10AM - 12AM</td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" checked="checked" value="1" id="mon2">
+                                                                <label for="mon2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" value="1" id="tue2">
+                                                                <label for="tue2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" checked="checked" value="1" id="wed2">
+                                                                <label for="wed2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" value="1" id="thur2">
+                                                                <label for="thur2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox"  value="1" id="fri2">
+                                                                <label for="fri2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox" checked="checked" value="1" id="sat2">
+                                                                <label for="sat2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="no-padding">
+                                                            <div class="checkbox check-success checkbox-circle  no-margin">
+                                                                <input type="checkbox"  value="1" id="sun2">
+                                                                <label for="sun2"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td> <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                                        <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-12">
+                                <button data-dismiss="modal" type="button" class="btn btn-success btn-lg btn-large pull-right">
+                                Save & Next
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+</div>
+<!-- /.modal-dialog -->
+
+
+<div class="modal fade slide-right" id="changePwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-sm">
+    <div class="modal-content-wrapper">
+        <div class="modal-content table-block">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i></button>
+            <div class="modal-body v-align-middle ">
+                <h5 class="bold text-left m-t-100"><i class="fa fa-unlock-alt"></i> Change <span class="semi-bold"> Password</span></h5>
+                <br>
+                <div class="form-group form-group-default">
+              <label>Old Password</label>
+              <div class="controls">
+                <input type="password" name="username" placeholder="**********" class="form-control" required="" aria-required="true">
+              </div>
+            </div>
+             <div class="form-group form-group-default">
+              <label>New Password</label>
+              <div class="controls">
+                <input type="password" name="username" placeholder="**********" class="form-control" required="" aria-required="true">
+              </div>
+            </div>
+             <div class="form-group form-group-default">
+              <label>Re-type Password</label>
+              <div class="controls">
+                <input type="password" name="username" placeholder="**********" class="form-control" required="" aria-required="true">
+              </div>
+            </div>
+                <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+
+<div class="modal slide-right fade" id="bankAccountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content-wrapper">
+        <div class="modal-content table-block">
+        <div class="panel-heading modal-title ">
+                        <div class="panel-title">
+                            <div class="col-sm-9">
+                                <h5 class="panel-title font-montserrat text-uppercase"><i class="fa fa-comment"></i> Chat Settings
+                                </h5>
+                            </div>
+                           
+                    </div>
+                </div>
+            
+            <div class="modal-body ">
+            <div class="m-t-100">
+                <div class="col-md-8 col-md-offset-2 ">
+                    
+                 
+                         <button class="btn btn-success btn-animated from-left fa fa-credit-card active" type="button">
+    <span>HDFC</span>
+</button>
+<button class="btn btn-default btn-animated from-left fa fa-credit-card" type="button">
+    <span>SBI</span>
+</button>  
+<button class="btn btn-default btn-animated from-left fa fa-credit-card" type="button">
+    <span>Standard Chatard</span>
+</button>  
+<button class="btn btn-default btn-animated from-left fa fa-plus pull-right" type="button">
+    <span>Add</span>
+</button>        
+
+
+            
+           <span class="cleafix"></span>
+
+           <div class="row m-t-40">
+                                        <div class="col-md-4 bold">
+                                            Membership
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" name="" value="Pawan Kumar" class="form-control">
+                                        </div>
+                                    </div>
+<div class="row m-t-10">
+                                        <div class="col-md-4 bold">
+                                            Bank Name
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" name="" value="HDFC" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-4 bold">
+                                            Account Number
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" name="" value="235255232286" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-4 bold">
+                                            IFSC Code
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" name="" value="HDFC00076" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row m-t-10">
+                                        <div class="col-md-4 bold">
+                                            MICR Code
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" name="" value="8645" class="form-control">
+                                        </div>
+                                    </div>
+           <span class="clearfix"></span>
+                <div class="m-t-50"></div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-danger " data-dismiss="modal"><i class="fa fa-trash-o"></i> Delete</button>
+                </div>
+                <div class="col-md-6">
+                    <span class="pull-right">
+                    <button type="button" class="btn btn-success " data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                </span>
+                </div>
+                
+                </div>
+           
+                </div>
+                
+            </div>
+                
+               
+                
+             
+                
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+
+
+
+
+
+
+<div class="modal slide-right fade" id="chatSettingModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content-wrapper">
+        <div class="modal-content table-block">
+        <div class="panel-heading modal-title ">
+                        <div class="panel-title">
+                            <div class="col-sm-9">
+                                <h5 class="panel-title font-montserrat text-uppercase"><i class="fa fa-comment"></i> Chat Settings
+                                </h5>
+                            </div>
+                           
+                    </div>
+                </div>
+            
+            <div class="modal-body ">
+            <div class="">
+                <div class="col-md-7">
+                    <h5 class="bold">New Patients</h5>
+                    <div class="row m-t-10">
+                                                    <div class="col-md-8 bold">
+                                                        Free
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="checkbox" class="switchery" checked />
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-8 bold">
+                                                        Paid
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="checkbox" class="switchery"  />
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-8 bold">
+                                                        Chatting Fees
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                       <input style="width: 55%" class="form-control" type="text" value="Rs 199">
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                  <h5 class="bold">My Patients</h5>
+                    <div class="row m-t-10">
+                                                    <div class="col-md-8 bold">
+                                                        Free
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="checkbox" class="switchery" checked />
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-8 bold">
+                                                        Free for  
+<select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                <option value="Male">1 Day</option>
+                                                <option value="Male">2 Day</option>
+                                                <option value="Male">5 Day</option>
+                                                <option value="Male">7 Day</option>
+                                            </select>
+
+                                                                    no. of days
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <input type="checkbox" class="switchery"  />
+                                                    </div>
+                                                </div>
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-8 bold">
+                                                        Chatting Fees
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                       <input style="width: 55%" class="form-control" type="text" value="Rs 199">
+                                                    </div>
+                                                </div>
+            
+           
+                </div>
+                <div class="col-md-5">
+                    
+                    <h5 class="bold">Search</h5>
+                    <input class="form-control" type="search" name="" value="">
+                    <table class="table table-patient-search">
+     
+      
+      <tbody>
+        
+        <tr><td><i class="fa fa-user"></i> Vishal Ramirez<i class="fa fa-minus-circle pull-right"></i></td></tr>
+        <tr><td><i class="fa fa-user"></i> Vishal Fisher<i class="fa fa-minus-circle pull-right"></i></td></tr>
+        <tr><td><i class="fa fa-user"></i> Kristin Howell<i class="fa fa-minus-circle pull-right"></i></td></tr>
+        <tr><td><i class="fa fa-user"></i> Scarlett Berry<i class="fa fa-minus-circle pull-right"></i></td></tr>
+        <tr><td><i class="fa fa-user"></i> Vishal Ramirez<i class="fa fa-minus-circle pull-right"></i></td></tr>
+        <tr><td><i class="fa fa-user"></i> Vishal Fisher<i class="fa fa-minus-circle pull-right"></i></td></tr>
+        <tr><td><i class="fa fa-user"></i> Kristin Howell<i class="fa fa-minus-circle pull-right"></i></td></tr>
+        <tr><td><i class="fa fa-user"></i> Scarlett Berry<i class="fa fa-minus-circle pull-right"></i></td></tr>
+
+      </tbody>
+    </table>
+                </div>
+                <span class="cleafix"></span>
+                <div class="m-t-50"></div>
+                <span class="pull-right">
+                    <button type="button" class="btn btn-success " data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </span>
+            </div>
+                
+               
+                
+             
+                
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+
+<!-- MODAL STICK UP  -->
+<div class="modal fade stick-up" id="new-doc-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel">
+                        <ul class="nav nav-tabs nav-tabs-simple">
+                            <li class="active">
+                                <a data-toggle="tab" href="#myProfileTab">My Profile</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#clinicSetupTab">Clinic Setup</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="myProfileTab">
+                                <div class="row column-seperation">
+                                    <div class="col-md-12">
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                DOB
+                                            </div>
+                                            <div class="col-md-10">
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">3/5/2015</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Specializations
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input class="custom-input" type="text" value="Enter Specialization">
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Education
+                                            </div>
+                                            <div class="col-md-10">
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">Degree</option>
+                                                </select>
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">College</option>
+                                                </select>
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">Year</option>
+                                                </select>
+                                                <input class="custom-input" type="text" value="Apollo Hospital">
+                                                <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Experience
+                                            </div>
+                                            <div class="col-md-10">
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">3/10/1997</option>
+                                                </select>
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">12/3/2005</option>
+                                                </select>
+                                                <input class="custom-input" type="text" value="Apollo Hospital">
+                                                <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Awards
+                                            </div>
+                                            <div class="col-md-10">
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">Year</option>
+                                                </select>
+                                                <input class="custom-input" type="text" value="Apollo Hospital">
+                                                <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Memberships
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input class="custom-input" type="text" value="Apollo Hospital">
+                                                <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Registration
+                                            </div>
+                                            <div class="col-md-10">
+                                                <input class="custom-input" type="text" value="Apollo Hospital">
+                                                <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Profile Pic
+                                            </div>
+                                            <div class="col-md-10">
+                                                <button type="button" class="btn btn-success">Upload</button>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-2 bold">
+                                                Create URL
+                                            </div>
+                                            <div class="col-md-10">
+                                                www.digitalclinic.com/ <input class="custom-input" type="text" value="johndoe"> <button type="button" class="btn btn-success">Check</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button type="button" class="btn btn-success btn-lg btn-large pull-right">
+                                            Save & Next
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="clinicSetupTab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Clinic Name
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Clinic Type
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="checkbox check-success checkbox-inline ">
+                                                    <input type="checkbox" checked="checked" value="1" id="checkbox2">
+                                                    <label for="checkbox2">Virtual</label>
+                                                </div>
+                                                <div class="checkbox check-success  checkbox-inline">
+                                                    <input type="checkbox"  value="1" id="checkbox3">
+                                                    <label for="checkbox3">In-Person</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Address
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                City
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                State
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Phone
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Email
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Website
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Fees
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input class="custom-input" type="text" value="Apollo Clinic"/>
+                                            </div>
+                                        </div>
+                                        <div class="row m-t-10">
+                                            <div class="col-md-4 bold">
+                                                Show On Website
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="checkbox" class="switchery" checked />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table class="table table-hover table-schedule">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Schedules</th>
+                                                        <th>Sun</th>
+                                                        <th>Mon</th>
+                                                        <th>Tue</th>
+                                                        <th>Wed</th>
+                                                        <th>Thur</th>
+                                                        <th>Fri</th>
+                                                        <th>Sat</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr><td>10AM - 12AM</td>
+                                                    <td class="no-padding">
+                                                        <div class="checkbox check-success checkbox-circle  no-margin">
+                                                            <input type="checkbox" checked="checked" value="1" id="mon1">
+                                                            <label for="mon1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="no-padding">
+                                                        <div class="checkbox check-success checkbox-circle  no-margin">
+                                                            <input type="checkbox" checked="checked" value="1" id="tue1">
+                                                            <label for="tue1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="no-padding">
+                                                        <div class="checkbox check-success checkbox-circle  no-margin">
+                                                            <input type="checkbox"  value="1" id="wed1">
+                                                            <label for="wed1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="no-padding">
+                                                        <div class="checkbox check-success checkbox-circle  no-margin">
+                                                            <input type="checkbox" checked="checked" value="1" id="thur1">
+                                                            <label for="thur1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="no-padding">
+                                                        <div class="checkbox check-success checkbox-circle  no-margin">
+                                                            <input type="checkbox" checked="checked" value="1" id="fri1">
+                                                            <label for="fri1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="no-padding">
+                                                        <div class="checkbox check-success checkbox-circle  no-margin">
+                                                            <input type="checkbox"  value="1" id="sat1">
+                                                            <label for="sat1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td class="no-padding">
+                                                        <div class="checkbox check-success checkbox-circle  no-margin">
+                                                            <input type="checkbox" value="1" id="sun1">
+                                                            <label for="sun1"></label>
+                                                        </div>
+                                                    </td>
+                                                    <td> <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                                    <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a></td>
+                                                </tr>
+                                                <tr><td>4PM - 6AM</td>
+                                                <td class="no-padding">
+                                                    <div class="checkbox check-success checkbox-circle  no-margin">
+                                                        <input type="checkbox" checked="checked" value="1" id="mon2">
+                                                        <label for="mon2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="no-padding">
+                                                    <div class="checkbox check-success checkbox-circle  no-margin">
+                                                        <input type="checkbox" value="1" id="tue2">
+                                                        <label for="tue2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="no-padding">
+                                                    <div class="checkbox check-success checkbox-circle  no-margin">
+                                                        <input type="checkbox" checked="checked" value="1" id="wed2">
+                                                        <label for="wed2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="no-padding">
+                                                    <div class="checkbox check-success checkbox-circle  no-margin">
+                                                        <input type="checkbox" value="1" id="thur2">
+                                                        <label for="thur2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="no-padding">
+                                                    <div class="checkbox check-success checkbox-circle  no-margin">
+                                                        <input type="checkbox"  value="1" id="fri2">
+                                                        <label for="fri2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="no-padding">
+                                                    <div class="checkbox check-success checkbox-circle  no-margin">
+                                                        <input type="checkbox" checked="checked" value="1" id="sat2">
+                                                        <label for="sat2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="no-padding">
+                                                    <div class="checkbox check-success checkbox-circle  no-margin">
+                                                        <input type="checkbox"  value="1" id="sun2">
+                                                        <label for="sun2"></label>
+                                                    </div>
+                                                </td>
+                                                <td> <a class="btn btn-transparent" href="#"><i class="fa fa-trash-o"></i></a>
+                                                <a class="btn btn-transparent" href="#"><i class="fa fa-plus"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-12">
+                                    <button type="button" class="btn btn-complete  btn-lg btn-large " id="addClinicBtn">
+                                    <i class="fa fa-home"></i> Add more Clinic
+                                    </button>
+                                    <button type="button" class="btn btn-success btn-lg btn-large pull-right">
+                                    Save
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- /.modal-content -->
+</div>
+</div>
+<!-- /.modal-dialog -->
+<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-bez/jquery.bez.min.js"></script>
+<script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+<script src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+<script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="assets/plugins/classie/classie.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+<script src="assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
+<script src="assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/plugins/switchery/js/switchery.min.js"></script>
+<!-- END VENDOR JS -->
+<!-- BEGIN CORE TEMPLATE JS -->
+<script src="pages/js/pages.js" type="text/javascript"></script>
+<!-- END CORE TEMPLATE JS -->
+<!-- BEGIN PAGE LEVEL JS -->
+<script src="assets/js/scripts.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL JS -->
+</body>
+</html>

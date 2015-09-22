@@ -1,0 +1,108 @@
+/*
+
+* Override Pages default styles or create your own styles here
+
+*/
+
+
+.search-doctor{margin-top: 25px; margin-bottom: 30px;}
+
+.doctor-search-info .title{
+	font-family: 'Montserrat';
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #47b5ab;
+}
+
+.doctor-search-info .title-consultancy{
+	    font-family: 'Montserrat';
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #CACACA;
+}
+
+
+.table-doc-clinic tbody tr td {
+    background: #fff;
+    border-bottom: 1px solid rgba(213, 218, 219, 0.7);
+    border-top: 0px;
+    padding: 20px;
+    font-size: 13.5px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    border: none;
+}
+
+.table-doc-clinic tbody tr td{background: transparent;}
+
+.table-small tbody tr td{
+	padding: 5px;
+	border: none;
+}
+
+.panel .panel-heading .panel-title{display: block;}
+
+.btn-transparent{background: transparent;border: none;}
+.btn-transparent:hover{background: transparent;border: none;}
+
+.table-small tbody tr td:first-child{font-weight: bold;}
+
+.custom-input{    height: 35px;
+    padding: 6px 33px 6px 17px;
+    line-height: 23px;}
+
+.book-now-btn{width: 100%;
+display: block;}
+.book-now-btn .btn{width:100%;    width: 100%;
+    text-align: center !important;}
+
+
+    .online-status{position: relative;
+    top: -25px;
+    right: -14px;
+font-size: 16px !important;
+}
+
+    .online{color: #6EE089 !important;}
+
+
+
+/*doc*/
+
+
+  .doctor-register div.cs-skin-slide > span:after, div.cs-skin-slide.cs-active > span:after{    font-size: 14px !important;}
+  .doctor-register .cs-backdrop{border:none !important;}
+ .doctor-register div.cs-skin-slide > span{height: 35px;
+    padding: 6px 33px 6px 2px;
+    line-height: 19px;
+font-weight: 700;
+text-decoration: underline;
+}
+
+.profile-user-profile{
+	width: 100px;
+}
+
+.thumbnail-wrapper.bordered.d-full{
+width: 100%;
+height: auto;
+}
+
+.checkbox-inline{display: inline-block; margin-top: 10px !important;}
+.table-schedule tbody tr td{ position: relative;padding: 10px 0px; text-align: center;}
+.table-my-clinic tbody tr td{ position: relative;    padding: 10px 0px;}
+.table-schedule tbody tr td .checkbox{ position: absolute;left: 16px;text-align: left;}
+.panel-group .panel-heading .panel-title > a{display: inline-block;}
+
+.modal-title{overflow: auto;
+    background-color: #47b5ab;
+    color: #fff;
+    padding-top: 16px;}
+
+    .modal .modal-body{overflow: auto;}
+
+    .table-patient-search tbody tr td{padding: 10px}
+    .table-patient-search .fa-minus-circle{color: red}
+    body.fixed-header .header{position: absolute;}
