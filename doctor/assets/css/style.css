@@ -105,4 +105,12 @@ height: auto;
 
     .table-patient-search tbody tr td{padding: 10px}
     .table-patient-search .fa-minus-circle{color: red}
+  .table-patient-search .fa-circle{color: #6EE089 !important}
     body.fixed-header .header{position: absolute;}
+
+    .nav-tabs-simple > li:after{    background-color: #47b5ab;}
+
+       .btn-clinic h5{}
+
+    .btn-clinic small{display: block; text-align: left}
+    .label-primary{background-color: #6d5cae;color: #fff;}

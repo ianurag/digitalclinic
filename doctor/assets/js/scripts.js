@@ -11,6 +11,14 @@ elems.forEach(function(html) {
 });
 
 
+    $('#patient-dob').datepicker();
+    $('#patient-member-dob').datepicker();
+
+    $('#datepicker-range').datepicker();
+
+    $("#phone").mask("999-999-9999");
+    $("#creditcard").mask("9999-9999-9999-9999-9999")
+   
 
 
 
