@@ -5,7 +5,15 @@
 */
 
 
-.search-doctor{margin-top: 25px; margin-bottom: 30px;}
+.search-doctor{margin-top: 70px; margin-bottom: 70px;}
+
+.search-doctor #doc-search-box{    height: 60px;
+    border-radius: 5px 0 0 5px;}
+
+
+   .search-doctor #doc-search-btn{    height: 60px;
+    padding: 0 35px;
+    font-size: 20px;}
 
 .doctor-search-info .title{
 	font-family: 'Montserrat';
@@ -114,3 +122,14 @@ height: auto;
 
     .btn-clinic small{display: block; text-align: left}
     .label-primary{background-color: #6d5cae;color: #fff;}
+
+    .form-horizontal .form-group {
+  /*border-bottom: 1px solid #d5dadb;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  margin-bottom: 0;*/
+  border-bottom: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+}
