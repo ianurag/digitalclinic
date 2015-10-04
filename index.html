@@ -1,4 +1,711 @@
-<<<<<<< HEAD
-=======
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+        <meta charset="utf-8" />
+        <title>DigitalClinic - Doctor's Search</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="apple-touch-icon" href="pages/ico/60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN Vendor CSS-->
+        <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen" />
+        <link href="assets/plugins/jquery-datatable/media/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css" media="screen" />
+        <link media="screen" type="text/css" rel="stylesheet" href="assets/plugins/switchery/css/switchery.min.css">
+        <!-- BEGIN Pages CSS-->
+        <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+        <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
+        <link class="main-stylesheet" href="pages/css/themes/simple.css" rel="stylesheet" type="text/css" />
+        <link media="screen" type="text/css" rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+        <link href="https://fontastic.s3.amazonaws.com/a4q35VJdrrsWBy86whygKE/icons.css" rel="stylesheet">
+        <link media="screen" type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+        <!--[if lte IE 9]>
+                                                        <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <script type="text/javascript">
+            window.onload = function()
+            {
+            // fix for windows 8
+            if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
+                document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="pages/css/windows.chrome.fix.css" />'
+            }
+        </script>
+    </head>
+    <body class="fixed-header">
+     
+        <!-- START PAGE-CONTAINER -->
+        <div class="page-container main-page-wrapper" >
+            <!-- START PAGE HEADER WRAPPER -->
+            <!-- START HEADER -->
+            <div class="header ">
+                <!-- START MOBILE CONTROLS -->
+                <!-- LEFT SIDE -->
+                <div class="pull-left full-height visible-sm visible-xs">
+                    <!-- START ACTION BAR -->
+                    <div class="sm-action-bar">
+                        <a href="#" class="btn-link toggle-sidebar" data-toggle="sidebar">
+                        <span class="icon-set menu-hambuger"></span>
+                        </a>
+                    </div>
+                    <!-- END ACTION BAR -->
+                </div>
+                <!-- RIGHT SIDE -->
+                <div class="pull-right full-height visible-sm visible-xs">
+                    <!-- START ACTION BAR -->
+                    <div class="sm-action-bar">
+                        <a href="#" class="btn-link" data-toggle="quickview" data-toggle-element="#quickview">
+                        <span class="icon-set menu-hambuger-plus"></span>
+                        </a>
+                    </div>
+                    <!-- END ACTION BAR -->
+                </div>
+                <!-- END MOBILE CONTROLS -->
+                <div class=" pull-left sm-table">
 
->>>>>>> origin/gh-pages
+
+                    <div class="header-inner">
+                        <div class="brand inline  m-t-20">
+                           <img src="pages/img/logo-home.png">
+                        </div>
+
+                    </div>
+                </div>
+                <div class=" pull-right">
+                    <div class="header-inner">
+                    <a href="home.html" class="btn btn-link hidden-sm hidden-xs">Are you a <strong>Doctor</strong> ?</a>
+                      
+                        <a href="login.html" class="btn btn-link hidden-sm hidden-xs">Login</a>
+                        <a href="register.html" class="btn btn-link hidden-sm hidden-xs">Register</a>
+                    </div>
+                </div>
+                <div class=" pull-right" style="display: none;">
+                    <div class="header-inner">
+                        <a href="#" class="btn-link icon-set menu-hambuger-plus m-l-20 sm-no-margin hidden-sm hidden-xs" data-toggle="quickview" data-toggle-element="#quickview"></a>
+                    </div>
+                </div>
+                <div class=" pull-right" style="display: none;">
+                    <!-- START User Info-->
+                    <div class="visible-lg visible-md m-t-10">
+                        <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
+                            <span class="semi-bold">John</span> <span class="text-master">Doe</span>
+                        </div>
+                        <div class="dropdown pull-right">
+                            <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="thumbnail-wrapper d32 circular inline m-t-5">
+                            <img src="assets/img/profiles/avatar.jpg" alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+                            </span>
+                            </button>
+                            <ul class="dropdown-menu profile-dropdown" role="menu">
+                                <li><a href="#"><i class="pg-settings_small"></i> Settings</a>
+                                </li>
+                                
+                                <li class="bg-master-lighter">
+                                    <a href="login.html" class="clearfix">
+                                    <span class="pull-left">Logout</span>
+                                    <span class="pull-right"><i class="pg-power"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END User Info-->
+                </div>
+            </div>
+            <!-- END HEADER -->
+            <!-- END PAGE HEADER WRAPPER -->
+            <!-- START PAGE CONTENT WRAPPER -->
+            <div class="page-content-wrapper ">
+                <!-- START PAGE CONTENT -->
+                <div class="content full-height ">
+                    
+                    <div class="container-fluid container-fixed-lg ">
+                    <div class="col-md-8 col-md-offset-2 search-doctor" style="margin-top:100px">
+                    <h2 class="home-text-dynamic">Consult the best doctors from <strong id="dynamic-text"></strong></h2>
+                            <form role="search" id="doc-search-form" action="patient-search.html">
+                                <div class="input-group">
+                                    <input id="doc-search-box" type="text" class="form-control" placeholder="Search Doctor, location, specialization..." name="q">
+                                    <div class="input-group-btn">
+                                        <button id="doc-search-btn" class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                            <div class="doc-type-small">
+                                <a href="patient-search.html"><i class="icon clinic-bones"  data-toggle="tooltip" data-placement="bottom" title="Orthpedics"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-brain" data-toggle="tooltip" data-placement="bottom" title="Neurologist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-teeth" data-toggle="tooltip" data-placement="bottom" title="Dentist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-ear" data-toggle="tooltip" data-placement="bottom" title="Ear Specialist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-gyno" data-toggle="tooltip" data-placement="bottom" title="Gynocologist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-stomach" data-toggle="tooltip" data-placement="bottom" title="Gastroenterologist"></i></a>
+                            </div>
+                        </div>
+
+
+                     
+                    </div>
+                </div>
+
+
+
+                <!-- END PAGE CONTENT -->
+                <!-- START FOOTER -->
+                <div class="container-fluid container-fixed-lg footer">
+                    <div class="copyright sm-text-center">
+                    <span class="sm-block">
+                        <a href="#" >About Us</a> |
+                        <a href="#" >Take A Tour</a> |
+                        <a href="#" >Terms & Condition</a> |
+                        <a href="#" >Contact Us</a> |
+                        <a href="#" >Careers</a>
+                        </span><br>
+                        <p class="small no-margin pull-left sm-pull-reset">
+                        <span class="hint-text">Copyright © 2015</span>
+                        <span class="font-montserrat">Digital Clinic</span>.
+                        <span class="hint-text">All rights reserved.</span>
+                        
+                        </p>
+                        <p class="small no-margin pull-right sm-pull-reset">
+                        <a href="#"><i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- END FOOTER -->
+            </div>
+            <!-- END PAGE CONTENT WRAPPER -->
+        </div>
+        <!-- END PAGE CONTAINER -->
+        <!--START QUICKVIEW -->
+        <div id="quickview" class="quickview-wrapper" data-pages="quickview">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                
+                <li >
+                    <a href="#quickview-alerts" data-toggle="tab">Notification</a>
+                </li>
+               
+            </ul>
+            <a class="btn-link quickview-toggle" data-toggle-element="#quickview" data-toggle="quickview"><i class="pg-close"></i></a>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              
+                <!-- BEGIN Alerts !-->
+                <div class="tab-pane fade no-padding active  in" id="quickview-alerts">
+                    <div class="view-port clearfix" id="alerts">
+                        <!-- BEGIN Alerts View !-->
+                        <div class="view ">
+                           
+                            <!-- BEGIN Alert List !-->
+                            <div data-init-list-view="ioslist" class="list-view boreded no-top-border">
+                                <!-- BEGIN List Group !-->
+                                <div class="list-view-group-container">
+                                    <!-- BEGIN List Group Header!-->
+                                    <div class="list-view-group-header text-uppercase">
+                                        Upcoming Appointment
+                                    </div>
+                                    <!-- END List Group Header!-->
+                                    <ul>
+                                        <!-- BEGIN List Group Item!-->
+                                        <li class="alert-list">
+                                            <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                                            <a href="javascript:;" class="" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                                            <p class="col-xs-height col-middle">
+                                            <span class="text-warning fs-10"><i class="fa fa-circle"></i></span>
+                                            </p>
+                                            <p class="p-l-10 col-xs-height col-middle col-xs-9 overflow-ellipsis fs-12">
+                                            <span class="text-master">Dr. David Nester</span>
+                                            </p>
+                                            <p class="p-r-10 col-xs-height col-middle fs-12 text-right">
+                                            <span class="text">Today <br></span>
+                                            <span class="text-master">03:30 PM</span>
+                                            </p>
+                                            </a>
+                                            <!-- END Alert Item!-->
+                                            <!-- BEGIN List Group Item!-->
+                                        </li>
+                                        <!-- END List Group Item!-->
+                                        <!-- BEGIN List Group Item!-->
+                                        <li class="alert-list">
+                                            <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                                            <a href="javascript:;" class="" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                                            <p class="col-xs-height col-middle">
+                                            <span class="text-warning fs-10"><i class="fa fa-circle"></i></span>
+                                            </p>
+                                            <p class="p-l-10 col-xs-height col-middle col-xs-9 overflow-ellipsis fs-12">
+                                            <span class="text-master">Dr. Jhony Dean</span>
+                                            </p>
+                                            <p class="p-r-10 col-xs-height col-middle fs-12 text-right">
+                                            <span class="text-warning">Today <br></span>
+                                            <span class="text-master">04:30 PM</span>
+                                            </p>
+                                            </a>
+                                            <!-- END Alert Item!-->
+                                            <!-- BEGIN List Group Item!-->
+                                        </li>
+                                        <!-- END List Group Item!-->
+                                        <!-- BEGIN List Group Item!-->
+                                        <li class="alert-list">
+                                            <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                                            <a href="javascript:;" class="" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                                            <p class="col-xs-height col-middle">
+                                            <span class="text-warning fs-10"><i class="fa fa-circle"></i></span>
+                                            </p>
+                                            <p class="p-l-10 col-xs-height col-middle col-xs-9 overflow-ellipsis fs-12">
+                                            <span class="text-master">Dr. Vivek Gulmohar</span>
+                                            </p>
+                                            <p class="p-r-10 col-xs-height col-middle fs-12 text-right">
+                                            <span class="text-warning">Today <br></span>
+                                            <span class="text-master">07:00 PM</span>
+                                            </p>
+                                            </a>
+                                            <!-- END Alert Item!-->
+                                            <!-- BEGIN List Group Item!-->
+                                        </li>
+                                        <!-- END List Group Item!-->
+                                    </ul>
+                                </div>
+                                <!-- END List Group !-->
+                            </div>
+                            <!-- END Alert List !-->
+                        </div>
+                        <!-- EEND Alerts View !-->
+                    </div>
+                </div>
+                <!-- END Alerts !-->
+                
+            </div>
+        </div>
+        <!-- END QUICKVIEW-->
+<div class="modal fade slide-right" id="changePwdModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-sm">
+    <div class="modal-content-wrapper">
+        <div class="modal-content table-block">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i></button>
+            <div class="modal-body v-align-middle ">
+                <h5 class="bold text-left m-t-100"><i class="fa fa-unlock-alt"></i> Change <span class="semi-bold"> Password</span></h5>
+                <br>
+                <div class="form-group form-group-default">
+              <label>Old Password</label>
+              <div class="controls">
+                <input type="password" name="username" placeholder="**********" class="form-control" required="" aria-required="true">
+              </div>
+            </div>
+             <div class="form-group form-group-default">
+              <label>New Password</label>
+              <div class="controls">
+                <input type="password" name="username" placeholder="**********" class="form-control" required="" aria-required="true">
+              </div>
+            </div>
+             <div class="form-group form-group-default">
+              <label>Re-type Password</label>
+              <div class="controls">
+                <input type="password" name="username" placeholder="**********" class="form-control" required="" aria-required="true">
+              </div>
+            </div>
+                <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+<!-- /.modal-dialog -->
+</div>
+
+
+
+<div class="modal fade stick-up disable-scroll" id="apointmentshare" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                    </button>
+                    <h3>Share <span class="semi-bold">My Appointment</span></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+                        <div class="container-xs-height">
+                            <div class="row-xs-height">
+                                <div class="social-user-profile col-xs-height text-center col-top">
+                                    <div class="thumbnail-wrapper d48 circular bordered b-white">
+                                        <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
+                                    </div>
+                                    <span class="text-warning fs-10 online-status online"><i class="fa fa-circle"></i></span>
+                                </div>
+                                <div class="col-xs-height p-l-20">
+                                    <h3 class="no-margin">Dr. Valorie Aller</h3>
+                                    <p class="no-margin fs-16">(cardiologist)</p>
+                                    <p class="hint-text m-t-5 small no-margin"><i class="fa fa-certificate"></i> MBBS, FRCS, University of Sydney</p>
+                                    <p class="hint-text m-t-5 small no-margin"><i class="fa fa-thumbs-o-up"></i> (344 Reviews)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>Your Appointment has been scheduled at 10:30 PM on 3rd, July 2015. Have a nice day !!</h3>
+                        <p>Share this</p>
+                        <a class="btn btn-fb"><i class="fa fa-facebook-square"></i></a>
+                        <a class="btn btn-tw"><i class="fa fa-twitter-square"></i></a>
+                        <a class="btn btn-g"><i class="fa fa-google-plus-square"></i></a>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                    <button id="finishappointment" type="button" class="btn btn-primary m-t-5 pull-right" data-dismiss="modal">Close</button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!-- END MODAL STICK UP  -->
+<!-- MODAL clinic  -->
+<div class="modal fade stick-up disable-scroll" id="modalSlideUp" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                    </button>
+                    <h3>Apollo Clinic <span class="semi-bold">Clinic</span></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-4">
+                        <div class="container-xs-height">
+                            <div class="row-xs-height">
+                                <div class="social-user-profile col-xs-height text-center col-top">
+                                    <div class="thumbnail-wrapper d48 circular bordered b-white">
+                                        <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
+                                    </div>
+                                    <span class="text-warning fs-10 online-status online"><i class="fa fa-circle"></i></span>
+                                </div>
+                                <div class="col-xs-height p-l-20">
+                                    <h3 class="no-margin">Dr. Valorie Aller</h3>
+                                    <p class="no-margin fs-16">(cardiologist)</p>
+                                    <p class="hint-text m-t-5 small no-margin"><i class="fa fa-certificate"></i> MBBS, FRCS, University of Sydney</p>
+                                    <p class="hint-text m-t-5 small no-margin"><i class="fa fa-thumbs-o-up"></i> (344 Reviews)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <img src="assets/img/map.png" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                    <button type="button" class="btn btn-primary m-t-5 pull-right" data-dismiss="modal">Close</button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!-- END MODAL STICK UP  -->
+<!-- MODAL Appointment  -->
+<div class="modal fade stick-up disable-scroll" id="modalappointment" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                    </button>
+                    <h3>Book <span class="semi-bold">Appointment</span></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-3">
+                        <div class="thumbnail-wrapper d80 circular bordered b-white">
+                            <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="">
+                            <h3 class="no-margin">Dr. Valorie Aller</h3>
+                            <p class="no-margin fs-16">(cardiologist)</p>
+                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-certificate"></i> MBBS, FRCS, University of Sydney</p>
+                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-thumbs-o-up"></i> (344 Reviews)</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <img src="assets/img/cal.jpg" class="img-responsive" alt="Responsive image">
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                    <button  id="submitAppointment"  class="btn btn-primary btn-animated from-left fa fa-check pull-right" type="button" data-dismiss="modal" data-target="#myModal">
+                    <span>Proceed</span>
+                    </button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!-- END MODAL STICK UP  -->
+<!-- MODAL puprpose  -->
+<div class="modal fade stick-up disable-scroll" id="modalappointmentpurpose" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                    </button>
+                    <h3>Purpose <span class="semi-bold">of Appointment</span></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-3">
+                        <div class="thumbnail-wrapper d80 circular bordered b-white">
+                            <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="">
+                            <h3 class="no-margin">Dr. Valorie Aller</h3>
+                            <p class="no-margin fs-16">(cardiologist)</p>
+                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-certificate"></i> MBBS, FRCS, University of Sydney</p>
+                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-thumbs-o-up"></i> (344 Reviews)</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label"><i class="fa fa-user"></i></label>
+                                <div class="col-sm-10">
+                                    <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                        <option value="johndoe">John Doe </option>
+                                        <option value="Jamesdoe">James Doe </option>
+                                        <option value="Alliedoe">Allie Doe</option>
+                                        <option value="Alliedoe">Adward Doe</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label"><i class="fa fa-calendar"></i></label>
+                                <div class="col-sm-10">
+                                    <label class="control-label">22-jul-2015</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label"><i class="fa fa-clock-o"></i></label>
+                                <div class="col-sm-10">
+                                    <label class="control-label">03:44 PM</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label"><i class="fa fa-home"></i></label>
+                                <div class="col-sm-10">
+                                    <label class="control-label">Clinic</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <h4>Purpose of Appointment/Consultation</h4>
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3"></textarea>
+                                <small class="pull-right">256 charecter left</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
+                    <button id="submitappointmentdetail" class="btn btn-primary btn-animated from-left fa fa-check pull-right" type="button" >
+                    <span>Proceed</span>
+                    </button>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+<!-- END MODAL STICK UP  -->
+<!-- MODAL puprpose  -->
+<div class="modal fade stick-up disable-scroll" id="modalappointmentpayment" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
+    <div class="modal-dialog modal-lg ">
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="modal-header clearfix text-left">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                    </button>
+                    <h3>Enter <span class="semi-bold">Payment Detail</span></h3>
+                </div>
+                <div class="modal-body">
+                    <div class="col-sm-3">
+                        <div class="thumbnail-wrapper d80 circular bordered b-white">
+                            <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="">
+                            <h3 class="no-margin">Dr. Valorie Aller</h3>
+                            <p class="no-margin fs-16">(cardiologist)</p>
+                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-certificate"></i> MBBS, FRCS, University of Sydney</p>
+                            <p class="hint-text m-t-5 small no-margin"><i class="fa fa-thumbs-o-up"></i> (344 Reviews)</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="panel">
+                            <ul class="nav nav-tabs nav-tabs-simple">
+                                <li class="active">
+                                    <a data-toggle="tab" href="#tab2hellowWorld">Credit Card</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#tab2FollowUs">Debit Card</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="tab" href="#tab2Inspire">PayUmoney</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab2hellowWorld">
+                                    <div class="row column-seperation">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="name" class="col-sm-2 control-label">Card Holder</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="name" value="John Doe">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="name" class="col-sm-2 control-label">Card Number</label>
+                                                <div class="col-sm-5">
+                                                    <div  class="input-group date">
+                                                        <input id="creditcard" type="text" class="form-control" value="1234-5678-4657-2365-3345">
+                                                        <span class="input-group-addon"><i class="fa fa-credit-card"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="name" class="col-sm-2 control-label">Expiry Date</label>
+                                                <div class="col-sm-5"><select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">May</option>
+                                                    <option value="Male">June</option>
+                                                    <option value="Male">July</option>
+                                                    <option value="Male">Aug</option>
+                                                    <option value="Male">Sep</option>
+                                                    <option value="Male">Oct</option>
+                                                </select> /
+                                                <select class="cs-select cs-skin-slide" data-init-plugin="cs-select">
+                                                    <option value="Male">2015</option>
+                                                    <option value="Male">2016</option>
+                                                    <option value="Male">2017</option>
+                                                    <option value="Male">2018</option>
+                                                    <option value="Male">2019</option>
+                                                    <option value="Male">2020</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="name" class="col-sm-2 control-label">CVV</label>
+                                            <div class="col-sm-5">
+                                                <input id="cvv" type="password" class="form-control" value="344">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab2FollowUs">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab2Inspire">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+                <button id="submitappointmentpayment" class="btn btn-primary btn-animated from-left fa fa-check pull-right" type="button" >
+                <span>Pay</span>
+                </button>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal-content -->
+</div>
+</div>
+
+<!-- END MODAL STICK UP  -->
+
+<!-- /.modal-content -->
+<!-- Modal Window-->
+<div class="modal fade slide-right" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content-wrapper">
+            <div class="modal-content table-block">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i></button>
+                <div class="modal-body v-align-middle text-center   ">
+                    <h5 class="text-primary ">Before you <span class="semi-bold">proceed</span>, you have to login to make the necessary changes</h5>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Continue</button>
+                    <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal-content -->
+        <!-- BEGIN VENDOR JS -->
+
+      <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-bez/jquery.bez.min.js"></script>
+<script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+<script src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+<script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script src="assets/plugins/classie/classie.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="assets/plugins/jquery-inputmask/jquery.inputmask.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js"></script>
+<script src="assets/plugins/datatables-responsive/js/datatables.responsive.js" type="text/javascript"></script>
+<script src="assets/plugins/datatables-responsive/js/lodash.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/plugins/switchery/js/switchery.min.js"></script>
+<script type="text/javascript" src="assets/plugins/typed.js"></script>
+<!-- END VENDOR JS -->
+<!-- BEGIN CORE TEMPLATE JS -->
+<script src="pages/js/pages.js" type="text/javascript"></script>
+<!-- END CORE TEMPLATE JS -->
+<!-- BEGIN PAGE LEVEL JS -->
+<script src="assets/js/scripts.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL JS -->
+    </body>
+</html>
