@@ -30,6 +30,7 @@
         <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
         <link class="main-stylesheet" href="pages/css/themes/simple.css" rel="stylesheet" type="text/css" />
         <link media="screen" type="text/css" rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+        <link href="https://fontastic.s3.amazonaws.com/a4q35VJdrrsWBy86whygKE/icons.css" rel="stylesheet">
         <link media="screen" type="text/css" rel="stylesheet" href="assets/css/style.css"/>
         <!--[if lte IE 9]>
                                                                                                                                         < />
@@ -44,6 +45,74 @@
         </script>
     </head>
     <body class="fixed-header">
+
+     <div id="calender-detail" class="hover-menu">
+        <div><i class="fa fa-user-md"></i> Arun Kumar</div>
+        <div class="m-t-10"><i class="fa fa-calendar-o"></i> 3rd June,2015</div>
+        <div class="m-t-10"><i class="fa fa-clock-o"></i> 05:15 PM</div>
+        <div class="m-t-10"><i class="fa fa-hospital-o"></i> Clinic 1</div>
+        <div class="m-t-10"><i class="fa fa-phone"></i> +91 9830547898</div>
+        <small>City Centre, Office Tower, DC Block, Sector 1,Saltlake, Kolkata, West Bengal 700064</small>
+
+    </div>
+    <div id="patient-menu-hover" class="hover-menu">
+        <div class="feedback-box">
+<div class="container-xs-height m-b-10 m-t-10">
+<div class="row-xs-height">
+<div class="social-user-profile col-xs-height text-center col-top">
+<div class="thumbnail-wrapper d48 circular bordered b-white">
+<img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
+</div>
+
+</div>
+<div class="col-xs-height p-l-20">
+<h5 class="no-margin bold"><i class="fa fa-circle" style="color: #6EE089"></i> David Nester</h5>
+<p class="hint-text m-t-5 small no-margin">27 years (Male)</p>
+<p class="hint-text m-t-5 small no-margin"><i class="fa fa-phone"></i> +91 9898345543</p>
+<p class="hint-text m-t-5 small no-margin"><i class="fa fa-envelope-o"></i> arun.kumar@gmail.com</p>
+
+</div>
+</div>
+</div>
+<button type="button" class="btn btn-default btn-sm  btn-rounded m-r-20" ><i class="icon clinic-text-consult "></i> Text Consult</button>
+
+<button type="button" class="btn btn-default btn-sm  btn-rounded m-r-20" ><i class="icon clinic-book-video-consult "></i> Book Video Consult</button>
+</div>
+
+
+    </div>
+
+
+
+
+
+<div class="modal fade slide-up disable-scroll" id="block-calender" tabindex="-1" role="dialog" aria-hidden="false" >
+      <div class="modal-dialog">
+        <div class="modal-content-wrapper">
+          <div class="modal-content">
+            <div class="modal-header clearfix text-left">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i>
+              </button>
+              <h4>Are you Sure, you want to BLOCK all the selected time Slots ?</h4>
+            </div>
+            <div class="modal-body">
+              
+              <div class="row">
+                
+                <div class="col-md-12">
+                  <span class="pull-right ">
+                      <button type="button" class="btn btn-danger  m-t-5">Cancel</button>
+                  <button type="button" class="btn btn-success m-t-5">Block</button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+    </div>
+
         <!-- BEGIN SIDEBAR -->
         <div class="page-sidebar" data-pages="sidebar">
             <div id="appMenu" class="sidebar-overlay-slide from-top">
@@ -215,7 +284,7 @@
                     
                     <h5 class="bold">My Patient's</h5>
                     <input class="form-control" type="search" name="" value="">
-                    <table class="table table-striped table-patient-search">
+                    <table class="table table-striped table-patient-search" id="patient-search-list">
      
       
       <tbody>
@@ -292,7 +361,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-success">In Person</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
         <tr>
@@ -300,7 +369,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-primary">Virtual</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
         <tr>
@@ -308,7 +377,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-success">In Person</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
         <tr>
@@ -316,7 +385,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-success">In Person</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
         <tr>
@@ -324,7 +393,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-primary">Virtual</span></td>
           <td> 
-<i class="fa fa-ban"></i>
+<i class="fa fa-ban text-danger"></i>
           </td>
         </tr>
         <tr>
@@ -332,7 +401,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-primary">Virtual</span></td>
           <td> 
-<i class="fa fa-ban"></i>
+<i class="fa fa-ban text-danger"></i>
           </td>
         </tr>
         <tr>
@@ -340,7 +409,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-success">In Person</span></td>
           <td> 
-<i class="fa fa-ban"></i>
+<i class="fa fa-ban text-danger"></i>
           </td>
         </tr>
         
@@ -363,7 +432,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-success">In Person</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
         <tr>
@@ -371,7 +440,7 @@
           <td>Mr. S Banerjee</td>
           <td><span class="label label-primary">Virtual</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
         <tr>
@@ -379,7 +448,7 @@
           <td>Mr. M Basu</td>
           <td><span class="label label-success">In Person</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
         <tr>
@@ -387,7 +456,7 @@
           <td>Mrs Nita Roy</td>
           <td><span class="label label-success">In Person</span></td>
           <td> 
-<i class="fa fa-check-circle"></i>
+<i class="fa fa-check-circle text-success"></i>
           </td>
         </tr>
   
@@ -402,6 +471,256 @@
       <div class="row">
         <div class="col-md-12">
           
+        
+          <div class="btn btn-success btn-clinic clinic1">
+              <h5 class="bold">Clinic 1</h5>
+              <small><i class="fa fa-clock-o"></i> 10 AM - 12 PM</small>
+              
+              <small>Virtual/In-Person</small>
+          </div>
+          <div class="btn btn-default btn-clinic clinic2">
+              <h5 class="bold">Clinic 2</h5>
+              <small><i class="fa fa-clock-o"></i> 3 PM - 5 PM</small>
+     
+              <small>In-Person</small>
+          </div>
+          <div class="btn btn-default btn-clinic clinic3">
+              <h5 class="bold">Clinic 3</h5>
+              <small><i class="fa fa-clock-o"></i> 8 AM - 12 PM</small>
+              <small>Virtual</small>
+          </div>
+          <span class="clearfix "></span>
+
+          <table class="table table-hover doc-schedule-cal m-t-40">
+      <thead>
+        <tr class="text-center">
+          <th></th>
+          <th>Sunday<small>23-Oct-2015</small></th>
+          <th>Monday<small>24-Oct-2015</small></th>
+          <th>Tuesday<small>25-Oct-2015</small></th>
+          <th>Wednesday<small>26-Oct-2015</small></th>
+          <th>Thursday<small>27-Oct-2015</small></th>
+          <th>Friday<small>28-Oct-2015</small></th>
+          <th>Saturday<small>29-Oct-2015</small></th>
+          
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="min-15">
+          <th scope="row">07:00 AM</th>
+          <td>
+              <span  class="clinic1"></span>
+              <span  class="clinic1"></span>
+              <span  class=""></span>
+              <span  class=""></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class=""></span>
+              <span  class="clinic"></span>
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class=""></span>
+              <span  class="clinic"></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class=""></span>
+              <span  class="clinic"></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">09:00 AM</th>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class=""></span>
+              <span  class="clinic2"></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class=""></span>
+              <span  class="clinic2"></span>
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class=""></span>
+              <span  class="clinic"></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="3"></span>
+              <span  class="3"></span>
+              <span  class="3"></span>
+              <span  class="3"></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">12:00 PM</th>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class=""></span>
+              <span  class=""></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class=""></span>
+              <span  class=""></span>
+          </td>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class=""></span>
+              <span  class=""></span>
+              <span  class=""></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class=""></span>
+              <span  class="clinic2"></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">01:00 PM</th>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class=""></span>
+              <span  class=""></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic1"></span>
+              <span  class="clinic"1></span>
+              <span  class=""></span>
+              <span  class="clinic1"></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class=""></span>
+              <span  class="clinic2"></span>
+          </td>
+          <td>
+              <span  class=""></span>
+              <span  class=""></span>
+              <span  class=""></span>
+              <span  class=""></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">03:00 PM</th>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class=""></span>
+              <span  class="clinic3"></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class=""></span>
+              <span  class="clinic3"></span>
+          </td>
+          <td>
+             
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class=""></span>
+              <span  class="clinic3"></span>
+          </td>
+             
+          </td>
+          <td>
+              <span  class="clinic1"></span>
+              <span  class="clinic1"></span>
+              <span  class=""></span>
+              <span  class="clinic1"></span>
+
+          </td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+
+    <div class="row m-t-30">
+                                                    <div class="col-md-2 bold">
+                                                        Block
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <button data-toggle="modal" data-target="#block-calender"class="btn btn-success">Selected Time Slots</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row m-t-10">
+                                                    <div class="col-md-2 bold">
+                                                        DOB
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                       All Appointments on  
+
+                                                        <span style="width: 250px" id="patient-dob" class="input-group date">
+                                                                                <input type="text" class="form-control" value="10/02/2015">
+                                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i>
+                                                                                </span>
+                                                                            </span>
+                                                    </div>
+                                                </div>
 
         </div>
       </div>

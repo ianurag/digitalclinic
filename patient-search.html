@@ -30,6 +30,7 @@
         <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css" />
         <link class="main-stylesheet" href="pages/css/themes/simple.css" rel="stylesheet" type="text/css" />
         <link media="screen" type="text/css" rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/datepicker3.css"/>
+        <link href="https://fontastic.s3.amazonaws.com/a4q35VJdrrsWBy86whygKE/icons.css" rel="stylesheet">
         <link media="screen" type="text/css" rel="stylesheet" href="assets/css/style.css"/>
         <!--[if lte IE 9]>
                                                         <link href="pages/css/ie9.css" rel="stylesheet" type="text/css" />
@@ -44,6 +45,15 @@
         </script>
     </head>
     <body class="fixed-header">
+    <div id="calender-detail" class="hover-menu">
+        <div><i class="fa fa-user-md"></i> Dr. Valorie Aller</div>
+        <div class="m-t-10"><i class="fa fa-calendar-o"></i> 3rd June,2015</div>
+        <div class="m-t-10"><i class="fa fa-clock-o"></i> 05:15 PM</div>
+        <div class="m-t-10"><i class="fa fa-hospital-o"></i> Clinic 1</div>
+        <div class="m-t-10"><i class="fa fa-phone"></i> +91 9830547898</div>
+        <small>City Centre, Office Tower, DC Block, Sector 1,Saltlake, Kolkata, West Bengal 700064</small>
+
+    </div>
         <!-- BEGIN SIDEBAR -->
         <div class="page-sidebar" data-pages="sidebar">
             <div id="appMenu" class="sidebar-overlay-slide from-top">
@@ -350,7 +360,7 @@
                                 </div>
                                 <div class="doctor-search-info">
                                     <div class="col-xs-8 no-padding">
-                                        <h5 class="title">Apollo Clinic</h5>
+                                        <h5 class="title">Apollo Clinic <i data-toggle="modal" data-target="#modalSlideUp" class="fa fa-map-marker"></i></h5>
                                         <table  class="table table-doc-clinic" cellspacing="0" width="100%">
                                             <tbody>
                                                 <tr>
@@ -363,24 +373,28 @@
                                     </div>
                                     <div class="col-xs-4 no-padding">
                                         <h5 class="title-consultancy text-right">Consultancy</h5>
-                                        <span class="label label-success pull-right "><i class="fa fa-inr"></i> 250</span>
+                                        <span class="label label-success pull-right "><i  class="fa fa-inr"></i> 250</span>
 
                                     </div>
                                 </div>
                                 <div class="clearfix"></div>
-                                <div class="btn-group dropdown-default dropup book-now-btn">
-                                    <a class="btn btn-success btn-cons m-t-20 m-b-10 dropdown-toggle" data-toggle="dropdown" href="#" > Book Now <span class="caret"></span> </a>
-                                    <ul class="dropdown-menu ">
-                                        <li data-toggle="modal" data-target="#myModal"><a href="#">Text Consult</a>
-                                        </li>
-                                        <li data-toggle="modal" data-target="#modalappointment"><a href="#">Video Consult Now</a>
-                                        </li>
-                                        <li data-toggle="modal" data-target="#modalSlideUp"><a href="#">Book In-Person</a>
-                                        </li>
-                                        <li data-toggle="modal" data-target="#myModal"><a href="#">Book Video Consult</a>
-                                        </li>
-                                    </ul>
-                                </div>
+
+
+
+
+                                
+<div class="row">
+<div class="col-xs-6">
+    <button type="button" class="btn btn-success btn-cons m-b-10 col-md-12" data-toggle="modal" data-target="#myModal"><i class="icon clinic-text-consult pull-left"></i> Text Consult</button></div>
+    <div class="col-xs-6">
+<button type="button" class="btn btn-success btn-cons m-b-10 col-md-12" data-toggle="modal" data-target="#modalappointment"><i class="icon icon clinic-video-consult-now pull-left"></i> Video Consult Now</button></div>
+<div class="col-xs-6">
+<button type="button" class="btn btn-success btn-cons m-b-10 col-md-12" data-toggle="modal" data-target="#modalSlideUp"><i class="icon clinic-book-inperson pull-left"></i> Book In-Person</button></div>
+<div class="col-xs-6">
+<button type="button" class="btn btn-success btn-cons m-b-10 col-md-12" data-toggle="modal" data-target="#myModal"><i class="icon clinic-book-video-consult pull-left"></i> Book Video Consult</button></div>
+</div>
+
+                                
                             </div>
                         </div>
                     </div>
@@ -792,7 +806,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-sm-4">
-                        <div class="container-xs-height">
+                        <div class="container-xs-height m-t-40">
                             <div class="row-xs-height">
                                 <div class="social-user-profile col-xs-height text-center col-top">
                                     <div class="thumbnail-wrapper d48 circular bordered b-white">
@@ -818,7 +832,7 @@
                     </div>
                     <div class="clearfix"></div>
                     <hr>
-                    <button id="finishappointment" type="button" class="btn btn-primary m-t-5 pull-right" data-dismiss="modal">Close</button>
+                    <button id="finishappointment" type="button" class="btn btn-success m-t-5 pull-right" data-dismiss="modal">Close</button>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -862,7 +876,7 @@
                     </div>
                     <div class="clearfix"></div>
                     <hr>
-                    <button type="button" class="btn btn-primary m-t-5 pull-right" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success m-t-5 pull-right" data-dismiss="modal">Close</button>
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -873,7 +887,7 @@
 <!-- END MODAL STICK UP  -->
 <!-- MODAL Appointment  -->
 <div class="modal fade stick-up disable-scroll" id="modalappointment" tabindex="-1" role="dialog" aria-labelledby="modalSlideUpLabel" aria-hidden="false">
-    <div class="modal-dialog modal-lg ">
+    <div class="modal-dialog modal-lg " style="width:90%">
         <div class="modal-content-wrapper">
             <div class="modal-content">
                 <div class="modal-header clearfix text-left">
@@ -884,7 +898,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-sm-3">
-                        <div class="thumbnail-wrapper d80 circular bordered b-white">
+                        <div class="thumbnail-wrapper d80 circular bordered b-white m-t-30">
                             <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
                         </div>
                         <div class="clearfix"></div>
@@ -896,11 +910,232 @@
                         </div>
                     </div>
                     <div class="col-sm-9">
-                        <img src="assets/img/cal.jpg" class="img-responsive" alt="Responsive image">
+                    <ul class="nav nav-tabs nav-tabs-simple">
+                                                    <li class="active">
+                                                        <a data-toggle="tab" href="#myinfo"><i class="icon clinic-book-inperson "></i> Online Consultation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a data-toggle="tab" href="#myfamily"><i class="icon clinic-book-video-consult"></i> In-Person Consultation</a>
+                                                    </li>
+
+                                                </ul>
+                        <table class="table table-hover doc-schedule-cal m-t-40">
+      <thead>
+        <tr class="text-center">
+          <th></th>
+          <th>Sunday<small>23-Oct-2015</small></th>
+          <th>Monday<small>24-Oct-2015</small></th>
+          <th>Tuesday<small>25-Oct-2015</small></th>
+          <th>Wednesday<small>26-Oct-2015</small></th>
+          <th>Thursday<small>27-Oct-2015</small></th>
+          <th>Friday<small>28-Oct-2015</small></th>
+          <th>Saturday<small>29-Oct-2015</small></th>
+          
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="min-15">
+          <th scope="row">07:00 AM</th>
+          <td>
+              <span  class="clinic1"></span>
+              <span  class="clinic1"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic"></span>
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic"></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic"></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">09:00 AM</th>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic2"></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic2"></span>
+          </td>
+          <td>
+              <span  class="clinic"></span>
+              <span  class="clinic"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic"></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="vacent-slot3"></span>
+              <span  class="vacent-slot3"></span>
+              <span  class="vacent-slot3"></span>
+              <span  class="vacent-slot3"></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">12:00 PM</th>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+          </td>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic2"></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">01:00 PM</th>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic1"></span>
+              <span  class="clinic"1></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic1"></span>
+          </td>
+          <td>
+             
+          </td>
+          <td>
+              <span  class="clinic2"></span>
+              <span  class="clinic2"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic2"></span>
+          </td>
+          <td>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="vacent-slot"></span>
+
+          </td>
+        </tr>
+        <tr class="min-15">
+          <th scope="row">03:00 PM</th>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic3"></span>
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              
+          </td>
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic3"></span>
+          </td>
+          <td>
+             
+          <td>
+              <span  class="clinic3"></span>
+              <span  class="clinic3"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic3"></span>
+          </td>
+             
+          </td>
+          <td>
+              <span  class="clinic1"></span>
+              <span  class="clinic1"></span>
+              <span  class="vacent-slot"></span>
+              <span  class="clinic1"></span>
+
+          </td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+    <span class="clearfix"></span>
+<button class="btn  clinic1 doc-schedule-legend" type="button" data-clinic="clinic1">Clinic 1</button>
+<button class="btn  clinic2 doc-schedule-legend" type="button" data-clinic="clinic2">Clinic 2</button>
+<button class="btn  clinic3 doc-schedule-legend" type="button" data-clinic="clinic3">Clinic 3</button>
+    
+
+
                     </div>
                     <div class="clearfix"></div>
                     <hr>
-                    <button  id="submitAppointment"  class="btn btn-primary btn-animated from-left fa fa-check pull-right" type="button" data-dismiss="modal" data-target="#myModal">
+                    <button  id="submitAppointment"  class="btn btn-success btn-animated from-left fa fa-check pull-right" type="button" data-dismiss="modal" data-target="#myModal">
                     <span>Proceed</span>
                     </button>
                     <div class="clearfix"></div>
@@ -923,7 +1158,7 @@
                     <h3>Purpose <span class="semi-bold">of Appointment</span></h3>
                 </div>
                 <div class="modal-body">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 m-t-40">
                         <div class="thumbnail-wrapper d80 circular bordered b-white">
                             <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
                         </div>
@@ -935,7 +1170,7 @@
                             <p class="hint-text m-t-5 small no-margin"><i class="fa fa-thumbs-o-up"></i> (344 Reviews)</p>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 m-t-40">
                         <div class="form-horizontal">
                             <div class="form-group">
                                 <label for="name" class="col-sm-2 control-label"><i class="fa fa-user"></i></label>
@@ -979,7 +1214,7 @@
                     </div>
                     <div class="clearfix"></div>
                     <hr>
-                    <button id="submitappointmentdetail" class="btn btn-primary btn-animated from-left fa fa-check pull-right" type="button" >
+                    <button id="submitappointmentdetail" class="btn btn-success btn-animated from-left fa fa-check pull-right" type="button" >
                     <span>Proceed</span>
                     </button>
                     <div class="clearfix"></div>
@@ -1003,7 +1238,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="col-sm-3">
-                        <div class="thumbnail-wrapper d80 circular bordered b-white">
+                        <div class="thumbnail-wrapper d80 circular bordered b-white m-t-40">
                             <img alt="Avatar" width="55" height="55" data-src-retina="assets/img/profiles/avatar_small2x.jpg" data-src="assets/img/profiles/avatar.jpg" src="assets/img/profiles/avatar.jpg">
                         </div>
                         <div class="clearfix"></div>
@@ -1093,7 +1328,7 @@
                 </div>
                 <div class="clearfix"></div>
                 <hr>
-                <button id="submitappointmentpayment" class="btn btn-primary btn-animated from-left fa fa-check pull-right" type="button" >
+                <button id="submitappointmentpayment" class="btn btn-success btn-animated from-left fa fa-check pull-right" type="button" >
                 <span>Pay</span>
                 </button>
                 <div class="clearfix"></div>
@@ -1114,9 +1349,9 @@
             <div class="modal-content table-block">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="pg-close fs-14"></i></button>
                 <div class="modal-body v-align-middle text-center   ">
-                    <h5 class="text-primary ">Before you <span class="semi-bold">proceed</span>, you have to login to make the necessary changes</h5>
+                    <h5 class=" ">Before you <span class="semi-bold">proceed</span>, you have to login to make the necessary changes</h5>
                     <br>
-                    <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Continue</button>
+                    <button type="button" class="btn btn-success btn-block" data-dismiss="modal">Continue</button>
                     <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Cancel</button>
                 </div>
             </div>
