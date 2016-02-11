@@ -87,7 +87,7 @@
                 </div>
                 <div class=" pull-right">
                     <div class="header-inner">
-                    <a href="home.html" class="btn btn-link hidden-sm hidden-xs">Are you a <strong>Doctor</strong> ?</a>
+                    <a href="home.html" class="btn btn-doctor hidden-sm hidden-xs">Are you a <strong>Doctor</strong> ?</a>
                       
                         <a href="login.html" class="btn btn-link hidden-sm hidden-xs">Login</a>
                         <a href="register.html" class="btn btn-link hidden-sm hidden-xs">Register</a>
@@ -133,11 +133,45 @@
                 <!-- START PAGE CONTENT -->
                 <div class="content full-height ">
                     
-                    <div class="container-fluid container-fixed-lg ">
-                    <div class="col-md-8 col-md-offset-2 search-doctor" style="margin-top:100px">
-                    <h2 class="home-text-dynamic">Consult the best doctors for <a href="patient-search.html"><strong id="dynamic-text"></strong></a></h2>
+                    <div class="container-fluid container-fixed-lg home-wrapper">
+                    <img class="consultancy-text" src="assets/img/select_text.png" >
+                    <div class="col-md-8 col-md-offset-2 search-doctor" >
+                    <!-- <h2 class="home-text-dynamic">Consult the best doctors for <a href="patient-search.html"><strong id="dynamic-text"></strong></a></h2> -->
+                    <div class="row home-icon-topsearch">
+                        <div class="col-md-3 box-icon">
+                            <i class="clinic clinic-videochat"></i>
+                            <span>Video Consult</span>
+                        </div>
+                        <div class="col-md-3 box-icon">
+                            <i class="clinic clinic-chatconsultant"></i>
+                            <span>Chat Consult</span>
+                        </div>
+                        <div class="col-md-3 box-icon">
+                            <i class="clinic clinic-clinicvisit"></i>
+                            <span>Clinic Visit</span>
+                        </div>
+                        <div class="col-md-3 box-icon">
+                            <i class="clinic clinic-homevisit"></i>
+                            <span>Home Visit</span>
+                        </div>
+                    </div>
                             <form role="search" id="doc-search-form" action="patient-search.html">
                                 <div class="input-group">
+                                 <div class="input-group-btn" style="
+    background-color: rgba(255, 255, 255, 0.89);
+    border-radius: 3px 0 0 3px;
+">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
+    background: none;
+    border: none;
+">Kolkata <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Kolkata</a></li>
+          <li><a href="#">Delhi</a></li>
+          <li><a href="#">Mumbai</a></li>
+         
+        </ul>
+      </div><!-- /btn-group -->
                                     <input id="doc-search-box" type="text" class="form-control" placeholder="Search Doctor, location, specialization..." name="q">
                                     <div class="input-group-btn">
                                         <button id="doc-search-btn" class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search"></i></button>
@@ -146,8 +180,17 @@
                             </form>
 
 
+
+
+
                             <div class="doc-type-small">
                                 <a href="patient-search.html"><i class="icon clinic-bones"  data-toggle="tooltip" data-placement="bottom" title="Orthpedics"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-brain3" data-toggle="tooltip" data-placement="bottom" title="Neurologist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-teeth" data-toggle="tooltip" data-placement="bottom" title="Dentist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-ear" data-toggle="tooltip" data-placement="bottom" title="Ear Specialist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-gyno" data-toggle="tooltip" data-placement="bottom" title="Gynocologist"></i></a>
+                                <a href="patient-search.html"><i class="icon clinic-stomach" data-toggle="tooltip" data-placement="bottom" title="Gastroenterologist"></i></a>
+                                 <a href="patient-search.html"><i class="icon clinic-bones"  data-toggle="tooltip" data-placement="bottom" title="Orthpedics"></i></a>
                                 <a href="patient-search.html"><i class="icon clinic-brain3" data-toggle="tooltip" data-placement="bottom" title="Neurologist"></i></a>
                                 <a href="patient-search.html"><i class="icon clinic-teeth" data-toggle="tooltip" data-placement="bottom" title="Dentist"></i></a>
                                 <a href="patient-search.html"><i class="icon clinic-ear" data-toggle="tooltip" data-placement="bottom" title="Ear Specialist"></i></a>
